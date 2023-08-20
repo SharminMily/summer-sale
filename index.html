@@ -32,7 +32,7 @@
                             off</span></p>
                         <div class="lg:flex justify-center pt-10">
                             <h2 class="text-lg font-semi pt-2 pr-2">Use Promo Code</h2>
-                            <button class="btn text-white  bg-[#E527B2]">SELL200</button>
+                            <button class="btn text-white btn-outline bg-[#E527B2]">SELL200</button>
                         </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title text-base font-semibold">Full Jersey Set</h2>
-                            <p><span>69.00</span> TK</p>
+                            <p><span>69.90</span> TK</p>
                         </div>
                     </div>
                     <!-- card - six -->
@@ -179,7 +179,6 @@
                    
                 </div>
                  <!-- card end -->
-
                 <div class="flex-2 lg:w-80 md:w-[275px] px-10 ">
 
                     <div class="bg-white rounded-lg ">
@@ -189,7 +188,7 @@
                         <div class="flex mt-2 pb-6">
                             <input id="input-value" type="text" placeholder="Coupon code"
                                 class="input input-bordered w-full lg:relative max-w-xs" />
-                            <button id="apply-btn" class="btn right-[170px] lg:absolute text-white  bg-[#E527B2]">Apply</button>
+                            <button id="apply-btn" class="btn right-[170px] lg:absolute btn-outline text-white  bg-[#E527B2]">Apply</button>
                         </div>
                     </div>
 
@@ -210,12 +209,34 @@
                                 <span class="font-semibold text-slate-500" id="discount">00</span>
                                 TK</p>
                             <p class="font-bold">Total : 
-                                <span class="font-semibold text-slate-500" id="total-price">00</span>
+                                <span class="font-semibold text-slate-500" id="total-calculate">00</span>
                                 TK</p>                           
                         </div>
                         <hr class="bg-gray-500 w-50 h-[2px] mt-4">
                         <div class="mt-6">
-                            <button id="make-purchase" class="btn w-full lowercase text-white  bg-[#E527B2]">Make Purchase</button>
+                            <button id="make-purchase" onclick="my_modal_2.showModal()" class="btn btn-outline w-full lowercase text-white bg-[#E527B2]">Make Purchase</button>
+                           
+                            <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
+                                <form method="dialog" class="modal-box ">
+                                  <!-- modal show -->
+                                  <div class="card bg-base-100 rounded-lg">
+                                    <figure class="">
+                                      <img src="./images/congo.png" alt="Shoes" class="rounded-xl" />
+                                    </figure>
+                                    <div class="card-body items-center text-center">
+                                      <h2 class="card-title font-bold text-2xl">Congratulations</h2>                    
+                                      <p>Your Purchase the product.</p>
+                                      <div class="card-actions">                                        
+                                      </div>                                     
+                                    </div>
+                                  </div>
+                                  <div class="modal-action flex justify-center">                                                            
+                                    <button id="go-home" class="btn btn-outline text-white bg-[#E527B2]">Go Home</button>                                    
+                                  </div>
+                                </form>
+                              </dialog>
+                             <!-- modal End -->
+
                         </div>
                     </div>
                 </div>
