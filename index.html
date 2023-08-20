@@ -23,7 +23,7 @@
 
 <body class="bg-[#F8F8F8]">
     <header>
-        <div class="hero min-h-screen lg:h-[100vh] md:h-[105vh]  bg-base-200 bg-[#F9F6E2]">
+        <div class="hero min-h-screen lg:h-[100vh] md:h-[130vh]  bg-base-200 bg-[#F9F6E2]">
             <div class="hero-content flex-col lg:flex-row-reverse lg:mx-28 md:mr-16 pr-6">
                 <img src="images/Summer 1.png" class="max-w-sm w-2/3 rounded-lg shadow-2xl" />
                 <div class="mr-24">
@@ -31,7 +31,7 @@
                     <h1 class="lg:text-5xl md:text-4xl text-xl md:ml-16 lg:ml-0 ml-6 md:text-center font-bold">Purchase TK 200 or <br>above & get <span class="text-[#E527B2]"> 20%
                             off</span></p>
                         <div class="lg:flex justify-center pt-10">
-                            <h2 class="text-lg font-semi pr-2">Use Promo Code</h2>
+                            <h2 class="text-lg font-semi pt-2 pr-2">Use Promo Code</h2>
                             <button class="btn text-white  bg-[#E527B2]">SELL200</button>
                         </div>
                 </div>
@@ -52,7 +52,7 @@
                     <div class="grid lg:grid-cols-3 gap-4 md:grid-cols-2 grid-cols-1">
                     <!-- Kitchenware -->
                       <!-- card- one -->
-                     <div class="card bg-base-100 shadow-xl ">
+                     <div class="card bg-base-100 shadow-xl" onclick="selectedCard(this)">
                         <div class="bg-slate-100 m-4">
                             <figure class="p-10 ">
                                 <img src="images/prod1.png" alt="Shoes" class="rounded-xl " />
@@ -67,11 +67,11 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title text-base font-semibold">K. Accessories</h2>
-                            <p><span>39.00</span> TK</p>
+                            <p><span>79.00</span> TK</p>
                         </div>
                     </div>    
                     <!-- card - two -->
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div class="card bg-base-100 shadow-xl" onclick="selectedCard(this)">
                         <div class="bg-slate-100 m-4">
                             <figure class="p-10 ">
                                 <img src="images/prod2.png" alt="Shoes" class="rounded-xl " />
@@ -85,12 +85,12 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="card-title text-base font-semibold">K. Accessories</h2>
-                            <p><span>25.00</span> TK</p>
+                            <h2 class="card-title text-base font-semibold">L. Accessories</h2>
+                            <p><span>75.00</span> TK</p>
                         </div>
                     </div>
                     <!-- card - three -->
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div class="card bg-base-100 shadow-xl" onclick="selectedCard(this)">
                         <div class="bg-slate-100 m-4">
                             <figure class="p-10 ">
                                 <img src="images/prod3.png" alt="Shoes" class="rounded-xl " />
@@ -116,7 +116,7 @@
                     <div class="grid lg:grid-cols-3 gap-4 md:grid-cols-2 grid-cols-1">
                     <!-- Sportswear -->
                      <!-- four -->
-                     <div class="card bg-base-100 shadow-xl ">
+                     <div class="card bg-base-100 shadow-xl" onclick="selectedCard(this)">
                         <div class="bg-slate-100 m-4">
                             <figure class="p-10 ">
                                 <img src="images/prod4.png" alt="Shoes" class="rounded-xl " />
@@ -135,10 +135,10 @@
                         </div>
                     </div>    
                     <!-- card - five -->
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div class="card bg-base-100 shadow-xl" onclick="selectedCard(this)">
                         <div class="bg-slate-100 m-4">
                             <figure class="p-10 ">
-                                <img src="images/prod5.png" alt="Shoes" class="rounded-xl " />
+                                <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
                             </figure>
                         </div>
                         <div class="card-body items-center text-center">
@@ -154,7 +154,7 @@
                         </div>
                     </div>
                     <!-- card - six -->
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div class="card bg-base-100 shadow-xl" onclick="selectedCard(this)">
                         <div class="bg-slate-100 m-4">
                             <figure class="p-10 ">
                                 <img src="images/prod6.png" alt="Shoes" class="rounded-xl " />
@@ -187,39 +187,45 @@
                             Have coupon?
                         </h1>
                         <div class="flex mt-2 pb-6">
-                            <input type="text" placeholder="Coupon code"
+                            <input id="input-value" type="text" placeholder="Coupon code"
                                 class="input input-bordered w-full lg:relative max-w-xs" />
-                            <button class="btn right-[170px] lg:absolute text-white  bg-[#E527B2]">Apply</button>
+                            <button id="apply-btn" class="btn right-[170px] lg:absolute text-white  bg-[#E527B2]">Apply</button>
                         </div>
                     </div>
 
                     <div class="mt-6 bg-white rounded-lg p-10 ">
                         <div class="font-bold">
-                            <ul>
-                                <li>Home Cooker</li>
+                            <ol id="product-name">
+                                <!-- <li>Home Cooker</li>
                                 <li>Sports cates</li>    
-                                <li>Sports cates</li>    
-                            </ul>
+                                <li>Sports cates</li>     -->
+                            </ol>
                         </div>
                         <hr class="bg-gray-500 w-50 h-[2px] mt-4">
                         <div class="mt-6 ">
-                            <p class="font-bold ">Total price : <span class="font-semibold text-slate-500">257.00</span>TK</p>
-                            <p class="font-bold "> Discount : <span class="font-semibold text-slate-500">257.00</span>TK</p>
-                            <p class="font-bold ">Total : <span class="font-semibold text-slate-500">257.00</span>TK</p>                           
+                            <p class="font-bold ">Total price : 
+                                <span class="font-semibold text-slate-500" id="total-price">00</span>
+                                TK</p>
+                            <p class="font-bold "> Discount : 
+                                <span class="font-semibold text-slate-500" id="discount">00</span>
+                                TK</p>
+                            <p class="font-bold">Total : 
+                                <span class="font-semibold text-slate-500" id="total-price">00</span>
+                                TK</p>                           
                         </div>
                         <hr class="bg-gray-500 w-50 h-[2px] mt-4">
                         <div class="mt-6">
-                            <button class="btn w-full lowercase text-white  bg-[#E527B2]">Make Purchase</button>
+                            <button id="make-purchase" class="btn w-full lowercase text-white  bg-[#E527B2]">Make Purchase</button>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-
-
         </section>
     </main>
+
+    <script src="js/app.js"></script>
 </body>
 
 </html>
