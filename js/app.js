@@ -28,20 +28,20 @@ function selectedCard(event) {
   }
 
   document.getElementById('apply-btn').addEventListener('click', function () {
-    // Discount
+    // apply input 
     const inputField = document.getElementById('input-value')
     const inputValue = inputField.value;
     // console.log(inputValue)
-    if (inputValue === 'SELL200') {
-      // const discount =   document.getElementById('discount') 
+    if (inputValue === 'SELL200') {   
+      // Discount   
       const payDiscount = 20;
       const discountAmount = (payDiscount / 100) * total;
       const payDiscountFixed = parseFloat(discountAmount).toFixed(2)
 
       const discount = document.getElementById('discount')
-      discount.innerText = payDiscountFixed;
-      // console.log(payDiscountAmount)
-
+      discount.innerText = payDiscountFixed;      
+      
+      // total calculate
       const totalPrice = total - payDiscountFixed;
       const totalPriceFixed = parseFloat(totalPrice).toFixed(2)
       const totalCalculate = document.getElementById('total-calculate');
@@ -56,9 +56,10 @@ function selectedCard(event) {
       // event.target.style.display = "none";
       inputField.value = '';  
       selectedProductList.innerText='';
-      // priceField.value = '';
+
       prices.innerText = '';
       discount.innerText = '';
+
       const totalCalculate = document.getElementById('total-calculate');
       totalCalculate.innerText = '';      
     })    
@@ -68,7 +69,7 @@ function selectedCard(event) {
 
 }
 
-// button
+// button disable style
 
 const button = document.getElementById("make-purchase");
 button.style.backgroundColor = "gray-500"
